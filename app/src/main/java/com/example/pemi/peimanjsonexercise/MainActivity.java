@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
                 JSONObject color = (JSONObject) colors.get(i);
                 JSONObject code = (JSONObject) color.get("code");
                 JSONArray rgba = (JSONArray) code.get("rgba");
-                if((int)rgba.get(1)==255) {
+                if((int)rgba.get(1)== 255) {
                     counterOfGreens++;
                     colorsContainingGreen+= color.getString("color")+(" - ");
                 }
