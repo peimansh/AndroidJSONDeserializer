@@ -124,7 +124,6 @@ public class MainActivity extends AppCompatActivity {
         Toast toast = Toast.makeText(this,"Scroll to view the whole text",Toast.LENGTH_LONG);
         toast.show();
         toast.setGravity(200,220,300);
-
     }
 
     public void list(View view) {
