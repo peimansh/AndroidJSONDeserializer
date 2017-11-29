@@ -24,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
 
         textView = (TextView) findViewById(R.id.text);
 
+
+    }
+
+    public void readJson() {
         String string =
                 "{\n" +
                         "\"colors\": [\n" +
@@ -112,18 +116,28 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void modify(View view) {
+        counterOfGreens=0;
+        colorsContainingGreen="";
+        readJson();
         textView.setText(newMessages);
         textView.setMovementMethod(new ScrollingMovementMethod());
         Toast toast = Toast.makeText(this,"Scroll to view the whole text",Toast.LENGTH_LONG);
         toast.show();
         toast.setGravity(200,220,300);
+
     }
 
     public void list(View view) {
+        counterOfGreens=0;
+        colorsContainingGreen="";
+        readJson();
         textView.setText(colorsContainingGreen);
     }
 
     public void count(View view) {
+        counterOfGreens=0;
+        colorsContainingGreen="";
+        readJson();
         textView.setText(Integer.toString(counterOfGreens));
     }
 }
